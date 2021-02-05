@@ -1,0 +1,13 @@
+include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../flutter_module_poc/.android/include_flutter.groovy'
+))
+rootProject.name = "Module Poc"
+
+include ':flutter_module_poc'
+project(':flutter_module_poc').projectDir = new File('../flutter_module_poc')
+
+include ':flutter_module_poc'
+project(':flutter_module_poc').projectDir = new File('../flutter_module_poc')
