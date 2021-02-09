@@ -7,5 +7,8 @@ class AppRoutes {
 
         @JvmStatic
         var screen1 = "/screen1";
+
+        @JvmStatic
+        var app2="/app2"
     }
 }
